@@ -1,0 +1,72 @@
+@import "../../styles/var.scss";
+@import "../../styles/fonts.scss";
+
+.inputSearch {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  background-color: transparent;
+  color: rgba(49, 48, 55, 0.5);
+  border: none;
+  margin: 0;
+  border-radius: 0;
+  font-size: $_16px;
+  font-weight: 400px;
+  padding: 33px;
+  color: aliceblue;
+}
+.inputSearch:focus {
+  background-color: rgba(49, 48, 55, 0.3);
+  position: relative;
+  color: aliceblue;
+}
+.inputWrap {
+  width: 100%;
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  @media (max-width: 670px) {
+    display: none;
+  }
+}
+.xMark {
+  font-size: $_16px;
+  color: black;
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  right: 15px;
+}
+
+.menuSearch {
+  width: 85px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: $_18px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  transition: 0.3s;
+ 
+}
+.menuSearch:hover {
+  color: rgb(15, 27, 107);
+}
+.search_show {
+  position: absolute;
+  right: 0px;
+  bottom: -1000px;
+  width: 100%;
+  height: 1000px;
+  border-top: 1px solid white;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 1);
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.search_close {
+  display: none;
+}

@@ -1,0 +1,16 @@
+.post {
+  margin: 0 15px 40px;
+  width: 352px;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.9s;
+  position: relative;
+  display: block;
+  transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+}
+.wrap {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 -15px;
+  display: flex;
+}

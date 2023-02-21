@@ -1,0 +1,48 @@
+@import "../../styles/var.scss";
+@import "../../styles/fonts.scss";
+
+.nav {
+  border-bottom: 1px solid #babbc5e6;
+  margin-bottom: 64px;
+}
+
+.tabs {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  @media (max-width: 440px) {
+    justify-content: center;
+  }
+}
+
+.tab {
+  display: flex;
+  font-size: $_20px;
+  text-align: center;
+  cursor: pointer;
+  align-items: center;
+  line-height: 63px;
+  transition: all 0.2s;
+
+  @media (max-width: 440px) {
+    font-size: $_16px;
+  }
+  @media (max-width: 440px) {
+    font-size: $_14px;
+  }
+}
+.tab a {
+  margin: auto;
+  padding: 0 12px;
+  width: 160px;
+  display: block;
+  font-family: "Dosis";
+  font-weight: 600;
+  @media (max-width: 360px) {
+    width: 140px;
+  }
+}
+.tab a.active {
+  display: block;
+  border-bottom: 3px solid #000;
+}

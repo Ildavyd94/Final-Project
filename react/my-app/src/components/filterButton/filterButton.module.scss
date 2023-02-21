@@ -1,0 +1,110 @@
+@import "../../styles/var.scss";
+@import "../../styles/fonts.scss";
+
+.wrap_filter {
+  display: flex;
+  align-items: center;
+  @media (max-width: 670px) {
+    display: none;
+  }
+}
+
+.filter_link {
+  margin-right: 16px;
+  @media (max-width: 470px) {
+    margin: 0px 10px 10px 0px;
+  }
+}
+.filter_link:last-child {
+  margin-right: 0;
+}
+.filter_link li {
+  outline: none;
+  border-radius: 15px;
+  padding: 16px 40px;
+  font-size: $_25px;
+  margin-right: 20px;
+  font-family: "Dosis";
+  font-weight: 500;
+  transition: 0.3s;
+  cursor: pointer;
+  @media (max-width: 772px) {
+    font-size: $_16px;
+  }
+  @media (max-width: 610px) {
+    padding: 14px 20px;
+  }
+}
+.filter_link li.active {
+  background-color: rgba(108, 27, 219, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.wrap_filter li:last-child {
+  margin-right: 0;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  display: none;
+  @media (max-width: 670px) {
+    display: block;
+  }
+}
+.wrapButton {
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.button_show {
+  background-color: rgba(255, 255, 255, 1);
+  font-size: $_16px;
+  border-radius: 4px;
+  width: 200px;
+  height: 56px;
+  color: rgba(49, 48, 55, 1);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button_show:hover {
+  border: 1px solid rgba(108, 27, 219, 1);
+}
+
+.menu__show {
+  position: absolute;
+  left: 15px;
+  right: 0px;
+  bottom: -170px;
+  width: 170px;
+  height: 170px;
+  border-top: 1px solid white;
+  border-radius: 10px;
+  background-color: rgb(108, 27, 219);
+  align-items: center;
+  transition: 0.3s;
+}
+.burger_link {
+  outline: none;
+  font-size: $_16px;
+  padding: 4px 0;
+  font-family: "Dosis";
+  font-weight: 500;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.burger_link li {
+  background-color: rgba(255, 255, 255, 1);
+  padding: 16px 40px;
+  border-radius: 4px;
+}
+.burger_link li::first-letter {
+  text-transform: uppercase;
+}

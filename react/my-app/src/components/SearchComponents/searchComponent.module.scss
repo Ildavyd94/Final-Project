@@ -1,0 +1,43 @@
+@import "../../styles/var.scss";
+@import "../../styles/fonts.scss";
+
+.sectionShow {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.container {
+  margin: auto;
+  max-width: 1170px;
+  padding: 0 15px;
+}
+.wrap {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 -15px;
+  display: flex;
+}
+.search_title {
+  font-size: $_56px;
+  font-family: "Dosis";
+  font-weight: 800;
+  margin-bottom: 64px;
+  @media (max-width: 670px) {
+    margin-top: 180px;
+    font-size: $_36px;
+  }
+  @media (max-width: 450px) {
+    font-size: $_25px;
+  }
+}
+.post {
+  width: 352px;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.9s;
+  position: relative;
+  transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+  margin: 0 15px 40px;
+}

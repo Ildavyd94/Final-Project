@@ -1,0 +1,28 @@
+.sectionPosts {
+  width: 100%;
+  padding: 64px 0 72px;
+}
+.container {
+  margin: auto;
+  max-width: 1170px;
+  padding: 0 15px;
+}
+.wrap_filter {
+  display: flex;
+  margin-bottom: 70px;
+}
+.wrap {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 -15px;
+  display: flex;
+}
+.post {
+  margin: 0 15px 40px;
+  width: 352px;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.9s;
+  position: relative;
+  transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+}

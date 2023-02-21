@@ -1,0 +1,17 @@
+@import "../../styles/var.scss";
+@import "../../styles/fonts.scss";
+
+.sectionSinglePage {
+  width: 100%;
+  margin-bottom: 71px;
+}
+.page_container {
+  margin: auto;
+  max-width: 1170px;
+  padding: 0 15px;
+}
+.wrap {
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  display: flex;
+}

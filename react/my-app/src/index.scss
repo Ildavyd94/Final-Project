@@ -1,0 +1,154 @@
+@import "./components/BigCard/cardList.module.scss";
+@import "./components/filterButton/filterButton.module.scss";
+@import "./pages/Home/home.module.scss";
+@import "./components/SmallCard/smallCard.module.scss";
+@import "./components/Footer/footer.module.scss";
+@import "./components/ThemeButton/ThemeButton.module.scss";
+@import "./components/Header/header.module.scss";
+@import "./components/SearchBox/search.module.scss";
+@import "./components/SearchComponents/searchComponent.module.scss";
+@import "./pages/SignIn/SignIn.module.scss";
+@import "./pages/SinglePage/singlePage.module.scss";
+@import "./components/Tabs/tabs.module.scss";
+@import "./components/logOut/logOut.module.scss";
+@import "./components/Posts/posts.module.scss";
+
+* {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: auto;
+  max-width: 1170px;
+  padding: 0 15px;
+  @media (max-width: 1205px) {
+    max-width: 990px;
+  }
+  @media (max-width: 1110px) {
+    max-width: 984px;
+  }
+  @media (max-width: 984px) {
+    max-width: 940px;
+  }
+  @media (max-width: 520px) {
+    max-width: 480px;
+  }
+  @media (max-width: 340px) {
+    max-width: 300px;
+  }
+  @media (max-width: 300px) {
+    width: 278px;
+  }
+}
+.page_container {
+  border-bottom: 1px solid var(--bg-icon);
+}
+.dark {
+  background-color: rgba(49, 48, 55, 1);
+  --title-color: rgba(255, 255, 255, 1);
+  --date-color: rgba(255, 255, 255, 0.5);
+  --box-shadow: 0px 13px 34px 3px rgba(255, 255, 255, 0.5);
+  --bg-color: rgba(255, 255, 255, 0.1);
+  --bg-button: rgba(141, 142, 151, 1);
+  --bg-icon: rgba(141, 142, 151, 1);
+}
+:root {
+  --background-color: rgba(243, 243, 243, 1);
+  --title-color: rgba(49, 48, 55, 1);
+  --date-color: rgba(49, 48, 55, 0.5);
+  --box-shadow: 0px 13px 34px 3px rgba(107, 116, 123, 0.6);
+  --bg-color: rgba(255, 255, 255, 1);
+  --bg-button: rgba(108, 27, 219, 1);
+  --bg-icon: rgba(49, 48, 55, 0.1);
+}
+.light {
+  background-color: var(--background-color);
+}
+.MainTitle {
+  color: var(--title-color);
+}
+.title {
+  color: var(--title-color);
+}
+.Formtitle {
+  color: var(--title-color);
+}
+.date {
+  color: var(--date-color);
+}
+.card_content {
+  background-color: var(--bg-color);
+}
+.post:hover {
+  box-shadow: var(--box-shadow);
+}
+.designer {
+  color: var(--date-color);
+}
+.switchTheme {
+  color: var(--date-color);
+}
+.Header {
+  background-color: var(--bg-color);
+}
+.AuthorName {
+  color: var(--title-color);
+}
+.menuSearch {
+  color: var(--title-color);
+}
+.linkToHome {
+  color: var(--title-color);
+}
+.Form {
+  background-color: var(--bg-color);
+}
+.FormInput {
+  background-color: var(--bg-color);
+}
+label {
+  color: var(--title-color);
+}
+.restorePassword {
+  color: var(--title-color);
+}
+.switch {
+  color: var(--bg-button);
+}
+.CardTitle {
+  color: var(--title-color);
+}
+.card_text p {
+  color: var(--title-color);
+}
+.tab_link {
+  color: var(--title-color);
+}
+.icon {
+  background-color: var(--bg-icon);
+  color: var(--title-color);
+}
+.userName {
+  color: var(--title-color);
+}
+.switchHome {
+  color: var(--title-color);
+  background-color: var(--bg-icon);
+}
+.search_title {
+  color: var(--title-color);
+}
+.logOut {
+  color: var(--title-color);
+}
+.filter_button {
+  color: var(--title-color);
+  background-color: var(--bg-icon);
+}
+.filter_button:hover {
+  background-color: var(--bg-color);
+}

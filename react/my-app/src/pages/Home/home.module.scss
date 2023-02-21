@@ -1,0 +1,27 @@
+@import "../../styles/var.scss";
+@import "../../styles/fonts.scss";
+
+.sectionPosts {
+  width: 100%;
+  padding: 64px 0 72px;
+}
+.container {
+  margin: auto;
+  max-width: 1170px;
+  padding: 0 15px;
+}
+.wrap {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -15px;
+  display: flex;
+}
+.MainTitle {
+  font-size: $_56px;
+  margin-bottom: 40px;
+  font-family: "Dosis";
+  font-weight: 700;
+  @media (max-width: 670px) {
+    margin-top: 170px;
+  }
+}
