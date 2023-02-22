@@ -86,7 +86,7 @@ const SignIn: React.FC = () => {
                 <label></label>
                 <input
                   type="submit"
-                  value={"Sigh in"}
+                  value={"Sign in"}
                   className={style.linkbtn}
                 ></input>
                 <button

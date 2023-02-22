@@ -69,7 +69,7 @@
   margin: auto;
   display: none;
   @media (max-width: 670px) {
-    display: flex;
+  display: flex;
   }
 }
 .wrap_burger {
@@ -120,7 +120,6 @@
 }
 .burger_link {
   margin-bottom: 14px;
-  border: 1px solid rgba(77, 10, 199, 1);
   padding: 5px;
   border-radius: 13px;
 }
@@ -137,12 +136,10 @@
   align-items: center;
   justify-content: space-evenly;
   @media (max-width: 670px) {
-    display: none;
+  display: none;
   }
 }
-.link:hover {
-  background-color: rgba(77, 10, 199, 0.2);
-}
+
 .link {
   background-color: transparent;
   border: 1px solid rgb(195, 192, 222);
