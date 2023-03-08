@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import styles from "./cardList.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
@@ -10,8 +9,7 @@ import {
 import { faFacebookF, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { addFavourite, delitemarksFavourite } from "../../appSlices/postsSlice";
-import { useParams, Link, useNavigate } from "react-router-dom";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface IBigCardProps {
   date: string;
@@ -24,7 +22,7 @@ interface IBigCardProps {
 const BigCard: React.FC<IBigCardProps> = (props) => {
   const faTwitterIcon = faTwitter as IconProp;
   const faFacebooIcon = faFacebookF as IconProp;
-  const { date, title, description, src, id } = props;
+  const { title, description, src, id } = props;
 
   const bookMarks = useAppSelector((state) => state.posts.favourites);
 

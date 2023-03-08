@@ -1,6 +1,5 @@
 import styles from "./smallCard.module.scss";
 
-
 interface ISmallCardProps {
   date: string;
   title: string;
@@ -20,18 +19,15 @@ const SmallCard: React.FC<ISmallCardProps> = (props) => {
         <div className="picture_hover"></div>
       </div>
       <div
-        
-        className={styles.card_content}
+          className="card_content"
       >
         <span
-          
-          className={styles.card_dateDay}
+          className="date"
         >
           {props.date}
         </span>
         <h3
-  
-          className={styles.card_title}
+          className="title"
         >
           {props.title}
         </h3>

@@ -19,7 +19,7 @@ export type PostsParams = {
 
 type PostsState = {
   filterPosts: Post[];
-  categoryId: number;
+  categoryId: number | any;
   currentPage: number;
 };
 
@@ -36,6 +36,20 @@ export const fetchFilteredPosts = createAsyncThunk(
       `http://localhost:3000/posts?${
         category > 0 ? `category=${category}` : ""
       }`
+    );
+    if (!response.ok) {
+      return rejectWithValue("Server error");
+    }
+    const json = await response.json();
+    return json;
+  }
+);
+
+export const fetchPaginatePosts = createAsyncThunk(
+  "filteredPosts/paginate",
+  async (page: number, { rejectWithValue }) => {
+    const response = await fetch(
+      `http://localhost:3000/posts?_limit=6&&_page=${page}`
     );
     if (!response.ok) {
       return rejectWithValue("Server error");
@@ -67,11 +81,18 @@ export const filteredPostsSlice = createSlice({
         console.log(action.payload);
       }
     );
+    builder.addCase(
+      fetchPaginatePosts.fulfilled,
+      (state, action: PayloadAction<any>) => {
+        state.currentPage = action.payload;
+        console.log(action.payload);
+      }
+    );
     builder.addCase(fetchFilteredPosts.pending, (state, action) => {
-      console.log(action.payload);
+      state.filterPosts = [];
     });
     builder.addCase(fetchFilteredPosts.rejected, (state, action) => {
-      console.log(action.payload);
+      state.filterPosts = [];
     });
   },
 });

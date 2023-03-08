@@ -1,6 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import BigCard from "../BigCard";
-import SmallCard from "../SmallCard";
+import SmallCard from '../SmallCard';
 import style from "./favorites.module.scss";
 import { useAppSelector } from "../../app/hooks";
 import { Link } from "react-router-dom";
@@ -12,7 +10,7 @@ function Favorites() {
     <>
       <div className={style.wrap}>
         {favourite.map((post) => (
-          <Link key={post.id} className={style.post} to={`/posts/${post.id}`}>
+          <Link key={post.id} className="post" to={`/posts/${post.id}`}>
             <SmallCard {...post} />
           </Link>
         ))}

@@ -1,7 +1,7 @@
 import style from "./searchComponent.module.scss";
 import { useAppSelector } from "../../app/hooks";
 import { Link } from "react-router-dom";
-import SmallCard from "../SmallCard";
+import SmallCard from '../SmallCard';
 
 interface SearchBoxProps {
   searchTerm: string;

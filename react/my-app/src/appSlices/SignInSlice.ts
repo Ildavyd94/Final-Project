@@ -29,6 +29,17 @@ export interface IUserParams {
   password: string;
 }
 
+// type UserState = {
+//   user: null | any; //переделать
+//   accessToken: string;
+//   isLoggedIn: boolean;
+// };
+// const initialState: UserState = {
+//   user: null,
+//   accessToken: "token",
+//   isLoggedIn: false,
+// };
+
 export const fetchLogin = createAsyncThunk<
   IUserTokens,
   IUserParams,
@@ -47,7 +58,7 @@ export const fetchLogin = createAsyncThunk<
       }
     );
     if (!response.ok) {
-      throw new Error("d");
+      throw new Error("Сheck your username and password");
     }
 
     const json = await response.json();
@@ -93,7 +104,7 @@ export const fetchRefresh = createAsyncThunk<
 >(
   "user/refresh", // имя
   async (token, thunkAPI) => {
-    
+    //функция котрая делает запрос
     try {
       const response = await fetch(
         `https://studapi.teachmeskills.by/auth/jwt/refresh/`,
@@ -160,7 +171,6 @@ export const userSlice = createSlice({
       state.accessToken = "";
       state.isLoggedIn = false;
     });
-    
   },
 });
 

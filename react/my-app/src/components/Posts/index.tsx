@@ -1,4 +1,4 @@
-import SmallCard from "../../components/SmallCard";
+import SmallCard from '../SmallCard';
 import React from "react";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import { Link } from "react-router-dom";
