@@ -1,4 +1,3 @@
-import React from "react";
 import style from "./tabs.module.scss";
 import { NavLink } from "react-router-dom";
 import { useAppSelector } from "../../app/hooks";

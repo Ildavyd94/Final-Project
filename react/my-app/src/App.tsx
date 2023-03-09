@@ -10,6 +10,7 @@ import Register from "./pages/Register/Register";
 import Footer from "./components/Footer/Footer";
 import { useAppSelector } from "./app/hooks";
 import { fetchRefresh, isLogin } from "./appSlices/SignInSlice";
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   const DarkTheme = useAppSelector((state) => state.Theme);
@@ -49,14 +50,19 @@ function App() {
         setisShows={setisShows}
       />
       <Routes>
-        <Route
-          index
-          path="/*"
-          element={<Home isShows={isShows} searchTerm={searchTerm} />}
-        />
+       
         <Route path="/signIn" element={<SignIn />} />
         <Route path="/registration" element={<Register />} />
-        <Route path="/posts/:id" element={<SinglePage />} />
+        <Route element={<ProtectedRoute />}>
+          <Route
+            index
+            path="/*"
+            element={<Home isShows={isShows} searchTerm={searchTerm} />}
+          />
+          <Route path="/posts/:id" element={<SinglePage />} />
+        </Route>
+        
+        
       </Routes>
 
       <Footer />

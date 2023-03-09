@@ -53,7 +53,7 @@ export const fetchPostById = createAsyncThunk(
 );
 
 export const postsSlice = createSlice({
-  name: "posts", //todos
+  name: "posts", 
   initialState,
   reducers: {
     addFavourite: (state, action: PayloadAction<any>) => {

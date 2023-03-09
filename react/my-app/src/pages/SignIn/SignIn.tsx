@@ -10,7 +10,6 @@ import { Navigate } from "react-router-dom";
 
 const SignIn: React.FC = () => {
   const navigate = useNavigate();
-  const userStatus = useAppSelector((state) => state?.User?.userData);
   const tokenStatus = useAppSelector((state) => state?.User?.accessToken);
   const successMessage = useAppSelector((state) => state?.User.successMessage);
   const isSignIn = useAppSelector((state) => state?.User.isLoggedIn);

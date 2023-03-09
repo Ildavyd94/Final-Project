@@ -23,11 +23,11 @@ const Posts: React.FC = () => {
     (state) => state.filterPosts
   );
 
-  const onClickCategory = (id: number) => {
+  const onClickCategory = React.useCallback((id: number) => {
     dispatch(setCategoryId(id));
-  };
+  }, [dispatch]);
 
-  // проверка URL-параметров (1ый рендер)
+  // проверка URL-параметров (1-ый рендер) и сохранение в редакс
   useEffect(() => {
     if (window.location.search) {
       const params = qs.parse(window.location.search.substring(1));
@@ -37,7 +37,7 @@ const Posts: React.FC = () => {
   }, [dispatch]);
   
   useEffect(() => {
-    window.scroll(0, 0);
+    // window.scroll(0, 0);
     if (!isSearch.current) {
       dispatch(fetchFilteredPosts(categoryId));
     }
